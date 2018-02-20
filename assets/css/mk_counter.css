@@ -1,0 +1,11 @@
+.mk_single_post {
+    width: 49%;
+    display: inline-block;
+    position: relative;
+}
+
+.mk_counter {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
