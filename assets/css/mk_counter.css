@@ -1,11 +1,23 @@
 .mk_single_post {
-    width: 49%;
     display: inline-block;
     position: relative;
 }
-
+.mk-6 {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
 .mk_counter {
     width: 100%;
     position: absolute;
     bottom: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .mk_single_post  {
+        width: 100%;
+    }
+    .mk-6{
+		width: 100%;
+    }
 }

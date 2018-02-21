@@ -70,6 +70,7 @@ function frontendscripts(){
 	wp_enqueue_script( 'mk_counter', MKCOUNTER_URL.'/assets/js/jQuery.countdownTimer.min.js', array('jquery'), MKCOUNTER_VERSION, false );
 	wp_enqueue_style( 'mk_counter_style', MKCOUNTER_URL.'/assets/css/jQuery.countdownTimer.css', array(), MKCOUNTER_VERSION, false );
 	wp_enqueue_style( 'mk_style', MKCOUNTER_URL.'/assets/css/mk_counter.css', array(), MKCOUNTER_VERSION, false );
+	wp_enqueue_style( 'mk_style_custom', MKCOUNTER_URL.'/assets/css/mk_daynamic_css.php', array(), MKCOUNTER_VERSION, false );
 }
 /*
  * 

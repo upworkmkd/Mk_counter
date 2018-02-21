@@ -63,10 +63,21 @@ class CounterClass{
 		 }
 
 		 $this->save();
+		 add_action('admin_menu', array( &$this, 'register_my_custom_submenu_page' ));	
 
 	} //------------end construct------------------------------------------
 
-
+	public function register_my_custom_submenu_page() {
+		add_submenu_page( 'edit.php?post_type='.$this->post_type_name, 'Setting', 'Setting', 'manage_options', 'mk_countdown_setting', array(&$this ,'mk_countdown_setting' )); 
+	}
+	public function mk_countdown_setting() {
+		if(isset($_POST['save_mk_option'])){
+			$optiondata=$_POST['Options'];
+			update_option("mk_countdown_setting",$optiondata);
+		}
+		$optionpage=get_option("mk_countdown_setting");
+		echo $content=MkCounterView('optionpage',array('options'=>$optionpage));
+	}
 	public function register_post_type() {
 
 		$name       = ucwords( str_replace( '_', ' ', $this->post_type_name ) );

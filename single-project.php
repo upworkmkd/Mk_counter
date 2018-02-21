@@ -13,16 +13,12 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<?php
 		// Start the loop.
-		while ( have_posts() ) : the_post();
-
-			// Include the single post content template.
-			//get_template_part( 'template-parts/content', 'single' );
+		while ( have_posts() ) : the_post(); 
+			echo MkCounterView('singleproject',array('post'=>$post)); 
+			echo "<div class='mk_righ mk-6'>";
+			echo "<h2 class='post_title'>".get_the_title($post->ID)."</h2>";
 			the_content();
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
-			// End of the loop.
+			echo "</div>";
 		endwhile;
 		?>
 

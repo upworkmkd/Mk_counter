@@ -85,7 +85,7 @@
         } else {
             $this.addClass("colorDefinition");
         }
-        if (opts.labelsFormat === false) {
+        //if (opts.labelsFormat === false) {
             if (options.size !== undefined) {
                 switch (size) {
                     case "xl":
@@ -107,7 +107,7 @@
             } else if (size === "sm") {
                 $this.addClass("size_sm");
             }
-        }
+        //}
         if (opts.isRTL === true) {
             $this.addClass("lang-rtl");
         }
